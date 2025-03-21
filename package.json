@@ -20,7 +20,6 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
-    "@t3-oss/env-core": "^0.12.0",
     "compression": "^1.8.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",

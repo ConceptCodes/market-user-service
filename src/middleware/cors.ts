@@ -5,7 +5,7 @@ import { createLogger } from "@lib/logger";
 const logger = createLogger("cors-middleware");
 
 const corsMiddleware = () => {
-  const apiGatewayUrl = env.API_GATEWAY_URL || "http://api-gateway:8080";
+  const apiGatewayUrl = env.API_GATEWAY_URL;
 
   const allowedOrigins = [apiGatewayUrl];
 
@@ -20,7 +20,6 @@ const corsMiddleware = () => {
 
   return cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (like internal service-to-service calls)
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {

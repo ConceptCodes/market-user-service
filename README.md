@@ -67,7 +67,7 @@ GET /api/health/alive
 ### Get User Profile
 
 ```
-POST /api/user/:userId
+GET /api/user/:userId
 ```
 ```json
 {
@@ -101,7 +101,7 @@ POST /api/user
 ### Update User
 
 ```
-PUT /api/user/:userId 
+PATCH /api/user/:userId 
  -d '{
     "email": "",
     "firstName": "",
@@ -128,4 +128,3 @@ DELETE /api/user/:userId
 
 ## Roadmap
 - [ ] Unit Testing
-- [ ] Database Sessions

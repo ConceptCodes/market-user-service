@@ -1,5 +1,5 @@
-import { ErrorCodes } from "@/constants";
 import { StatusCodes } from "http-status-codes";
+import { ErrorCodes } from "@/constants";
 
 export class HttpException extends Error {
   status: number;
@@ -9,7 +9,7 @@ export class HttpException extends Error {
     super(message);
     this.status = status;
     this.message = message;
-    this.code = code || ErrorCodes.INTERNAL_ERROR;
+    this.code = code ?? ErrorCodes.INTERNAL_ERROR;
   }
 }
 
